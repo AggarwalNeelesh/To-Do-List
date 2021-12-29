@@ -1,0 +1,2 @@
+# To-Do-List
+Task is to create an animated website to regain clarity and calmness by getting all tasks out of your head and onto your to-do list by just putting in three factors i.e. ● priority ● deadline ● time-length with the help of Artificial Intelligence. A system needs to be created which helps you prioritise your tasks on daily basis, giving attention to the work that actually needs to be done.
