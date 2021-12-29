@@ -1,0 +1,51 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+  public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter number of entries");
+    int n=sc.nextInt();
+    String name[]=new String[n];
+    int prior[]=new int[n];
+    int deadLine[]=new int[n];
+    int timeTaken[]=new int[n];
+    System.out.println("Enter  Name,Priority,deadLine,Time taken :- ");
+    for(int i=0;i<n;i++)
+    {  System.out.println("Entry "+(i+1));
+      sc.nextLine();
+       name[i]=sc.nextLine();
+       prior[i]=sc.nextInt();
+       deadLine[i]=sc.nextInt();
+       timeTaken[i]=sc.nextInt();
+    }
+    //Sorting the entries according to priority
+    for(int i=0;i<n;i++)
+    {
+      for(int j=i+1;j<n;j++)
+      {
+        if(prior[i]>prior[j])
+        { //Swapping
+          int y=prior[i];
+          prior[i]=prior[j];
+          prior[j]=y;
+
+          String x=name[i];
+          name[i]=name[j];
+          name[j]=x;
+
+          y=deadLine[i];
+          deadLine[i]=deadLine[j];
+          deadLine[j]=y;
+
+          y=timeTaken[i];
+          timeTaken[i]=timeTaken[j];
+          timeTaken[j]=y;
+        }
+      }
+    }
+    System.out.println("the Name,Priority,deadLine,Time taken in list are :- ");
+    for(int i=0;i<n;i++)System.out.println(name[i]+" "+prior[i]+" "+deadLine[i]+" "+timeTaken[i]);
+    
+  }
+}
